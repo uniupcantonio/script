@@ -1,0 +1,6 @@
+nmap -p- --min-rate 1000 -T4 -Pn 10.129.231.230 -oN full_verify.txt
+grep -cE "^[0-9]+/tcp +open" full_verify.txt
+===============
+para version: curl -sk https://10.129.231.230:443/ | grep -iEo '20[0-9]{2}-[0-9]{2}[a-z]?'
+
+note: 16
